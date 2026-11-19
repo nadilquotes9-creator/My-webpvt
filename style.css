@@ -114,9 +114,22 @@ main,
     transform: translateX(-50%);
     width: 900px;
     height: 450px;
-    background: radial-gradient(ellipse at top, rgba(37, 99, 235, 0.08) 0%, rgba(37, 99, 235, 0.02) 45%, transparent 75%);
+    background: radial-gradient(ellipse at top, rgba(147, 197, 253, 0.15) 0%, rgba(191, 219, 254, 0.08) 45%, transparent 75%);
     pointer-events: none;
     z-index: 0;
+}
+
+/* Light blue accent glow */
+.ambient-glow::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 600px;
+    height: 300px;
+    background: radial-gradient(ellipse at center, rgba(147, 197, 253, 0.12) 0%, transparent 70%);
+    pointer-events: none;
 }
 
 .container {
@@ -223,13 +236,14 @@ a {
 
 .nav-item:hover {
     color: var(--text-primary);
-    background: rgba(15, 23, 42, 0.04);
+    background: linear-gradient(135deg, rgba(219, 234, 254, 0.7) 0%, rgba(191, 219, 254, 0.5) 100%);
 }
 
 .nav-item.active {
     color: var(--text-primary);
-    background: transparent;
-    border: 1px solid transparent;
+    background: linear-gradient(135deg, rgba(219, 234, 254, 0.9) 0%, rgba(191, 219, 254, 0.7) 100%);
+    border: 1px solid rgba(147, 197, 253, 0.3);
+    box-shadow: 0 2px 8px rgba(147, 197, 253, 0.2);
 }
 
 /* Nav Actions & Status */
@@ -309,12 +323,29 @@ a {
     color: #ffffff;
     border-color: rgba(255, 255, 255, 0.15);
     box-shadow: 0 1px 2px rgba(0, 0, 0, 0.12);
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-primary::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(147, 197, 253, 0.3), transparent);
+    transition: left 0.5s ease;
+}
+
+.btn-primary:hover::before {
+    left: 100%;
 }
 
 .btn-primary:hover {
     background: var(--primary-hover);
     transform: translateY(-1px);
-    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.16);
+    box-shadow: 0 8px 24px rgba(147, 197, 253, 0.3);
 }
 
 .btn-secondary {
@@ -370,12 +401,12 @@ a {
     font-size: 0.76rem;
     font-weight: 500;
     color: var(--text-secondary);
-    background: var(--bg-card);
-    border: 1px solid var(--border-default);
+    background: linear-gradient(135deg, rgba(219, 234, 254, 0.8) 0%, rgba(191, 219, 254, 0.6) 100%);
+    border: 1px solid rgba(147, 197, 253, 0.3);
     padding: 0.35rem 0.8rem;
     border-radius: var(--radius-full);
     width: fit-content;
-    box-shadow: var(--inner-glow);
+    box-shadow: var(--inner-glow), 0 2px 12px rgba(147, 197, 253, 0.2);
 }
 
 .hero-badge i {
@@ -516,6 +547,7 @@ a {
 .what-i-do-card:hover {
     border-color: var(--border-hover);
     transform: translateY(-2px);
+    box-shadow: 0 12px 32px rgba(147, 197, 253, 0.25), var(--shadow-lg), var(--inner-glow);
 }
 
 .what-i-do-header {
@@ -597,6 +629,11 @@ a {
     text-transform: uppercase;
     letter-spacing: 0.08em;
     margin-bottom: 0.65rem;
+    background: linear-gradient(135deg, rgba(219, 234, 254, 0.9) 0%, rgba(191, 219, 254, 0.7) 100%);
+    border: 1px solid rgba(147, 197, 253, 0.35);
+    padding: 0.4rem 0.9rem;
+    border-radius: var(--radius-full);
+    box-shadow: 0 2px 8px rgba(147, 197, 253, 0.15);
 }
 
 .section-title {
@@ -637,6 +674,7 @@ a {
     border-color: var(--border-hover);
     background: var(--bg-card-hover);
     transform: translateY(-2px);
+    box-shadow: 0 12px 32px rgba(147, 197, 253, 0.2), var(--inner-glow);
 }
 
 .card-head {
@@ -1182,8 +1220,26 @@ a {
 
 .progress-fill {
     height: 100%;
-    background: linear-gradient(90deg, #1d4ed8 0%, #60a5fa 100%);
+    background: linear-gradient(90deg, #60a5fa 0%, #93c5fd 50%, #bfdbfe 100%);
     border-radius: var(--radius-full);
+    box-shadow: 0 0 12px rgba(147, 197, 253, 0.4);
+    position: relative;
+}
+
+.progress-fill::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+    animation: progress-shine 2s ease-in-out infinite;
+}
+
+@keyframes progress-shine {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(100%); }
 }
 
 /* ==========================================================================
@@ -1956,7 +2012,7 @@ a {
 .build-card:hover {
     border-color: var(--border-hover);
     transform: translateY(-3px);
-    box-shadow: var(--shadow-md);
+    box-shadow: 0 12px 32px rgba(147, 197, 253, 0.25), var(--shadow-md);
 }
 
 .build-mock {
@@ -2163,7 +2219,7 @@ a {
 .process-step:hover {
     border-color: var(--border-hover);
     transform: translateY(-2px);
-    box-shadow: var(--shadow-md);
+    box-shadow: 0 12px 32px rgba(147, 197, 253, 0.2), var(--shadow-md);
 }
 
 .process-num {
