@@ -348,34 +348,6 @@
             color: var(--text-secondary);
         }
 
-        .bg-code-vibe {
-            position: fixed;
-            inset: 0;
-            z-index: 0;
-            pointer-events: none;
-            overflow: hidden;
-        }
-
-        .code-token {
-            position: absolute;
-            font-family: var(--font-mono);
-            font-size: 0.72rem;
-            font-weight: 500;
-            color: rgba(15, 23, 42, 0.055);
-            letter-spacing: 0.02em;
-            white-space: nowrap;
-            animation: code-float 14s ease-in-out infinite;
-        }
-
-        .code-token:nth-child(2n) { animation-delay: -3s; }
-        .code-token:nth-child(3n) { animation-delay: -6s; }
-        .code-token:nth-child(4n) { animation-delay: -9s; }
-
-        @keyframes code-float {
-            0%, 100% { transform: translateY(0); opacity: 0.6; }
-            50% { transform: translateY(-12px); opacity: 1; }
-        }
-
         @media (max-width: 768px) {
             .stats-grid {
                 grid-template-columns: repeat(2, 1fr);
@@ -387,26 +359,11 @@
             .uptime-bar {
                 gap: 1.5px;
             }
-            .code-token:nth-child(5),
-            .code-token:nth-child(7) {
-                display: none;
-            }
         }
     </style>
 </head>
 <body>
     <div class="ambient"></div>
-
-    <!-- Dev / Network Background Vibe -->
-    <div class="bg-code-vibe" aria-hidden="true">
-        <span class="code-token" style="top: 12%; left: 8%;">const tps = 20.0;</span>
-        <span class="code-token" style="top: 26%; right: 10%;">SELECT * FROM players;</span>
-        <span class="code-token" style="top: 48%; left: 18%;">proxy.send(packet);</span>
-        <span class="code-token" style="top: 64%; right: 14%;">ping 14ms</span>
-        <span class="code-token" style="top: 82%; left: 35%;">// uptime: 99.98%</span>
-        <span class="code-token" style="top: 38%; right: 28%;">{ "cluster": "ceylonesports" }</span>
-        <span class="code-token" style="top: 72%; left: 55%;">if (antiCheat.flag()) ban();</span>
-    </div>
 
     <header class="header">
         <div class="container header-wrap">

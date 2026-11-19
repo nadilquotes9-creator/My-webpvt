@@ -83,28 +83,12 @@ body {
     min-height: 100vh;
 }
 
-/* Subtle, architectural background grid (Light blue themed) */
-body::before {
-    content: '';
-    position: fixed;
-    inset: 0;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='240' height='240' fill='none' stroke='%2393c5fd' stroke-width='1.2'%3E%3Crect x='22' y='28' width='26' height='18' rx='3'/%3E%3Cpath d='M28 35h14M28 41h8'/%3E%3Cpath d='M150 22h22a5 5 0 0 1 5 5v12a5 5 0 0 1-5 5h-14l-8 6v-6a5 5 0 0 1-5-5V27a5 5 0 0 1 5-5z'/%3E%3Ccircle cx='92' cy='40' r='10'/%3E%3Cpath d='M92 35v10M87 40h10'/%3E%3Crect x='48' y='118' width='22' height='16' rx='3'/%3E%3Cpath d='M54 126h10'/%3E%3Cpath d='M168 112c8-10 20-10 28 0'/%3E%3Ccircle cx='200' cy='150' r='8'/%3E%3Crect x='110' y='176' width='24' height='16' rx='3'/%3E%3Cpath d='M20 190h18M20 196h10'/%3E%3C/svg%3E");
-    background-size: 240px 240px;
-    pointer-events: none;
-    z-index: 0;
-    opacity: 0.6;
-    mask-image: linear-gradient(#000 0%, #000 38%, transparent 72%);
-    -webkit-mask-image: linear-gradient(#000 0%, #000 38%, transparent 72%);
-}
+/* Removed background grid pattern */
 
 main,
 .footer {
     position: relative;
     z-index: 1;
-}
-
-#networkCanvas {
-    display: none; /* Removed AI-cliche floating particle canvas */
 }
 
 .ambient-glow {
@@ -1990,85 +1974,7 @@ a:hover {
     }
 }
 
-/* Network Topology Background Pattern (Light blue themed) */
-.bg-network-pattern {
-    position: fixed;
-    inset: 0;
-    z-index: 0;
-    pointer-events: none;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='400' fill='none' stroke='%2393c5fd' stroke-width='1'%3E%3Ccircle cx='40' cy='60' r='4'/%3E%3Ccircle cx='140' cy='30' r='3'/%3E%3Ccircle cx='240' cy='80' r='5'/%3E%3Ccircle cx='340' cy='50' r='3'/%3E%3Ccircle cx='80' cy='180' r='4'/%3E%3Ccircle cx='200' cy='160' r='6'/%3E%3Ccircle cx='320' cy='200' r='4'/%3E%3Ccircle cx='60' cy='300' r='3'/%3E%3Ccircle cx='180' cy='280' r='5'/%3E%3Ccircle cx='300' cy='320' r='4'/%3E%3Cpath d='M40 60 L140 30 L240 80 L340 50'/%3E%3Cpath d='M80 180 L200 160 L320 200'/%3E%3Cpath d='M60 300 L180 280 L300 320'/%3E%3Cpath d='M40 60 L80 180 L60 300'/%3E%3Cpath d='M140 30 L200 160 L180 280'/%3E%3Cpath d='M240 80 L200 160'/%3E%3Cpath d='M340 50 L320 200'/%3E%3C/svg%3E");
-    background-size: 400px 400px;
-    opacity: 0.5;
-    mask-image: radial-gradient(ellipse at center, #000 25%, transparent 78%);
-    -webkit-mask-image: radial-gradient(ellipse at center, #000 25%, transparent 78%);
-}
-
-/* ==========================================================================
-   Dev / Network Background Vibe
-   ========================================================================== */
-.bg-code-vibe {
-    position: fixed;
-    inset: 0;
-    z-index: 0;
-    pointer-events: none;
-    overflow: hidden;
-}
-
-.code-token {
-    position: absolute;
-    font-family: var(--font-mono);
-    font-size: 0.72rem;
-    font-weight: 500;
-    color: rgba(37, 99, 235, 0.12);
-    letter-spacing: 0.02em;
-    white-space: nowrap;
-    animation: code-float 14s ease-in-out infinite;
-}
-
-.code-token:nth-child(2n) {
-    animation-delay: -3s;
-}
-
-.code-token:nth-child(3n) {
-    animation-delay: -6s;
-}
-
-.code-token:nth-child(4n) {
-    animation-delay: -9s;
-}
-
-.code-token:nth-child(5n) {
-    animation-delay: -12s;
-}
-
-.code-token:nth-child(6n) {
-    animation-delay: -15s;
-}
-
-@keyframes code-float {
-    0%, 100% {
-        transform: translateY(0);
-        opacity: 0.6;
-    }
-    50% {
-        transform: translateY(-12px);
-        opacity: 1;
-    }
-}
-
-@media (max-width: 768px) {
-    .code-token {
-        font-size: 0.65rem;
-    }
-
-    .code-token:nth-child(5),
-    .code-token:nth-child(7),
-    .code-token:nth-child(9),
-    .code-token:nth-child(11),
-    .code-token:nth-child(13) {
-        display: none;
-    }
-}
+/* Removed network topology background pattern */
 
 /* ==========================================================================
    What I Build — Product Showcase Cards (Olee-style)
