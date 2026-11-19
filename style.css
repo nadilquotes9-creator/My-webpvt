@@ -1842,3 +1842,59 @@ a {
         padding: 1.25rem;
     }
 }
+
+/* ==========================================================================
+   Dev / Network Background Vibe
+   ========================================================================== */
+.bg-code-vibe {
+    position: fixed;
+    inset: 0;
+    z-index: 0;
+    pointer-events: none;
+    overflow: hidden;
+}
+
+.code-token {
+    position: absolute;
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    font-weight: 500;
+    color: rgba(15, 23, 42, 0.055);
+    letter-spacing: 0.02em;
+    white-space: nowrap;
+    animation: code-float 14s ease-in-out infinite;
+}
+
+.code-token:nth-child(2n) {
+    animation-delay: -3s;
+}
+
+.code-token:nth-child(3n) {
+    animation-delay: -6s;
+}
+
+.code-token:nth-child(4n) {
+    animation-delay: -9s;
+}
+
+@keyframes code-float {
+    0%, 100% {
+        transform: translateY(0);
+        opacity: 0.6;
+    }
+    50% {
+        transform: translateY(-12px);
+        opacity: 1;
+    }
+}
+
+@media (max-width: 768px) {
+    .code-token {
+        font-size: 0.65rem;
+    }
+
+    .code-token:nth-child(5),
+    .code-token:nth-child(7) {
+        display: none;
+    }
+}
