@@ -1844,6 +1844,21 @@ a {
 }
 
 /* ==========================================================================
+   Network Topology Background Pattern
+   ========================================================================== */
+.bg-network-pattern {
+    position: fixed;
+    inset: 0;
+    z-index: 0;
+    pointer-events: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='400' fill='none' stroke='%23d5dde8' stroke-width='1.2'%3E%3Ccircle cx='40' cy='60' r='4'/%3E%3Ccircle cx='140' cy='30' r='3'/%3E%3Ccircle cx='240' cy='80' r='5'/%3E%3Ccircle cx='340' cy='50' r='3'/%3E%3Ccircle cx='80' cy='180' r='4'/%3E%3Ccircle cx='200' cy='160' r='6'/%3E%3Ccircle cx='320' cy='200' r='4'/%3E%3Ccircle cx='60' cy='300' r='3'/%3E%3Ccircle cx='180' cy='280' r='5'/%3E%3Ccircle cx='300' cy='320' r='4'/%3E%3Cpath d='M40 60 L140 30 L240 80 L340 50'/%3E%3Cpath d='M80 180 L200 160 L320 200'/%3E%3Cpath d='M60 300 L180 280 L300 320'/%3E%3Cpath d='M40 60 L80 180 L60 300'/%3E%3Cpath d='M140 30 L200 160 L180 280'/%3E%3Cpath d='M240 80 L200 160'/%3E%3Cpath d='M340 50 L320 200'/%3E%3C/svg%3E");
+    background-size: 400px 400px;
+    opacity: 0.65;
+    mask-image: radial-gradient(ellipse at center, #000 25%, transparent 78%);
+    -webkit-mask-image: radial-gradient(ellipse at center, #000 25%, transparent 78%);
+}
+
+/* ==========================================================================
    Dev / Network Background Vibe
    ========================================================================== */
 .bg-code-vibe {
@@ -1877,6 +1892,14 @@ a {
     animation-delay: -9s;
 }
 
+.code-token:nth-child(5n) {
+    animation-delay: -12s;
+}
+
+.code-token:nth-child(6n) {
+    animation-delay: -15s;
+}
+
 @keyframes code-float {
     0%, 100% {
         transform: translateY(0);
@@ -1894,7 +1917,10 @@ a {
     }
 
     .code-token:nth-child(5),
-    .code-token:nth-child(7) {
+    .code-token:nth-child(7),
+    .code-token:nth-child(9),
+    .code-token:nth-child(11),
+    .code-token:nth-child(13) {
         display: none;
     }
 }
