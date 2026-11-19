@@ -1707,3 +1707,138 @@ a {
         align-items: flex-start;
     }
 }
+
+/* ==========================================================================
+   Dev / Network Vibe Strip
+   ========================================================================== */
+.vibe-strip {
+    background: var(--bg-surface);
+    border-top: 1px solid var(--border-subtle);
+    border-bottom: 1px solid var(--border-subtle);
+    padding: 0.9rem 0;
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+}
+
+.vibe-track {
+    display: inline-flex;
+    align-items: center;
+    gap: 2.5rem;
+    white-space: nowrap;
+    animation: vibe-marquee 28s linear infinite;
+}
+
+.vibe-track span {
+    font-family: var(--font-mono);
+    font-size: 0.78rem;
+    font-weight: 600;
+    color: var(--text-muted);
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    position: relative;
+}
+
+.vibe-track span::after {
+    content: '';
+    display: inline-block;
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background: var(--primary);
+    margin-left: 2.5rem;
+    vertical-align: middle;
+    opacity: 0.5;
+}
+
+@keyframes vibe-marquee {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+}
+
+/* ==========================================================================
+   Dev Console Card
+   ========================================================================== */
+.console-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border-default);
+    border-radius: var(--radius-lg);
+    padding: 1.5rem 1.75rem;
+    margin-top: 1.5rem;
+    box-shadow: var(--shadow-sm), var(--inner-glow);
+    font-family: var(--font-mono);
+}
+
+.console-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+    padding-bottom: 0.85rem;
+    border-bottom: 1px solid var(--border-subtle);
+}
+
+.console-title-group {
+    display: flex;
+    align-items: center;
+    gap: 0.65rem;
+}
+
+.console-title-group h3 {
+    font-family: var(--font-mono);
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+.console-title-group .accent-icon {
+    color: var(--primary);
+}
+
+.console-body {
+    display: flex;
+    flex-direction: column;
+    gap: 0.45rem;
+    font-size: 0.82rem;
+    line-height: 1.55;
+}
+
+.console-body p {
+    color: var(--text-secondary);
+    margin: 0;
+}
+
+.console-body .prompt {
+    color: var(--primary);
+    font-weight: 700;
+    margin-right: 0.45rem;
+}
+
+.console-body .comment {
+    color: var(--text-muted);
+    font-style: italic;
+}
+
+.console-body .cursor {
+    color: var(--accent-blue);
+    animation: cursor-blink 1s step-end infinite;
+}
+
+@keyframes cursor-blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
+
+@media (max-width: 768px) {
+    .vibe-track {
+        gap: 1.75rem;
+    }
+
+    .vibe-track span::after {
+        margin-left: 1.75rem;
+    }
+
+    .console-card {
+        padding: 1.25rem;
+    }
+}

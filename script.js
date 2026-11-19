@@ -65,6 +65,8 @@ document.addEventListener('DOMContentLoaded', () => {
         const phrases = [
             'Minecraft Server Development',
             'Coding & Scripting Solutions',
+            'Network Architecture & Proxying',
+            'Java, SQL & JVM Optimization',
             'Staff & Community Moderation',
             'CeylonEsports MC Network'
         ];
