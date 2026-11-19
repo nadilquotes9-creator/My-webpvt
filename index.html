@@ -246,6 +246,96 @@
             </div>
         </section>
 
+        <!-- What I Build Section -->
+        <section class="section" id="build">
+            <div class="container">
+                <div class="section-header">
+                    <div class="section-tag">
+                        <i class="fa-solid fa-layer-group"></i> Capabilities
+                    </div>
+                    <h2 class="section-title">What I Build</h2>
+                    <p class="section-subtitle">Production systems for Minecraft networks — proxy clusters, plugins, moderation pipelines, and player-facing portals.</p>
+                </div>
+
+                <div class="build-grid">
+                    <!-- Card 1: Network Dashboards -->
+                    <div class="build-card">
+                        <div class="build-mock">
+                            <div class="mock-topbar"><span></span><span></span><span></span></div>
+                            <div class="mock-dash-body">
+                                <div class="mock-stat-row">
+                                    <div class="mock-stat"><span>TPS</span><strong>20.0</strong></div>
+                                    <div class="mock-stat"><span>Ping</span><strong>14ms</strong></div>
+                                    <div class="mock-stat"><span>Uptime</span><strong>99.98%</strong></div>
+                                </div>
+                                <div class="mock-bars">
+                                    <i style="height: 35%"></i><i style="height: 55%"></i><i style="height: 45%"></i><i style="height: 70%"></i><i style="height: 60%"></i><i style="height: 85%"></i><i style="height: 75%"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="build-body">
+                            <h3>Network Dashboards</h3>
+                            <p>Real-time telemetry views for TPS, tick health, player counts, and proxy latency — built with vanilla JS and live data hooks.</p>
+                            <div class="tech-tags"><span>JavaScript</span><span>Canvas</span><span>REST APIs</span></div>
+                        </div>
+                    </div>
+
+                    <!-- Card 2: Plugins & Scripts -->
+                    <div class="build-card">
+                        <div class="build-mock">
+                            <div class="mock-topbar"><span></span><span></span><span></span></div>
+                            <div class="mock-code-body">
+                                <p><span class="kw">public void</span> <span class="fn">onEnable</span>() {</p>
+                                <p>&nbsp;&nbsp;<span class="fn">registerCommand</span>(<span class="str">"rank"</span>);</p>
+                                <p>&nbsp;&nbsp;<span class="fn">syncPermissions</span>();</p>
+                                <p>}</p>
+                            </div>
+                        </div>
+                        <div class="build-body">
+                            <h3>Plugins &amp; Scripts</h3>
+                            <p>Custom Paper/Purpur plugins, command frameworks, webhook bots, and SQL-linked gameplay logic.</p>
+                            <div class="tech-tags"><span>Java</span><span>Spigot API</span><span>SQL</span></div>
+                        </div>
+                    </div>
+
+                    <!-- Card 3: Moderation Pipelines -->
+                    <div class="build-card">
+                        <div class="build-mock">
+                            <div class="mock-topbar"><span></span><span></span><span></span></div>
+                            <div class="mock-chat-body">
+                                <div class="msg"><b>PixelKite</b><span>gg wp</span></div>
+                                <div class="msg"><b>Nexiz_v2</b><span>thanks!</span></div>
+                                <div class="msg system"><i class="fa-solid fa-ban"></i> Grim_AC flagged xX_Hacker_Xx — auto-muted</div>
+                            </div>
+                        </div>
+                        <div class="build-body">
+                            <h3>Moderation Pipelines</h3>
+                            <p>Anti-cheat heuristics, automated punishment flows, Discord webhook alerts, and staff audit trails.</p>
+                            <div class="tech-tags"><span>PacketEvents</span><span>DiscordSRV</span><span>GrimAC</span></div>
+                        </div>
+                    </div>
+
+                    <!-- Card 4: Proxy & Cluster Ops -->
+                    <div class="build-card">
+                        <div class="build-mock">
+                            <div class="mock-topbar"><span></span><span></span><span></span></div>
+                            <div class="mock-proxy-body">
+                                <div class="proxy-node"><span>lobby-1</span><span class="ok">12ms</span></div>
+                                <div class="proxy-node"><span>survival-1</span><span class="ok">18ms</span></div>
+                                <div class="proxy-node"><span>creative-1</span><span class="warn">44ms</span></div>
+                                <div class="proxy-node"><span>velocity-3</span><span class="ok">9ms</span></div>
+                            </div>
+                        </div>
+                        <div class="build-body">
+                            <h3>Proxy &amp; Cluster Ops</h3>
+                            <p>Velocity/BungeeCord clustering, player routing, failover logic, and cross-server inventory sync.</p>
+                            <div class="tech-tags"><span>Velocity</span><span>BungeeCord</span><span>MySQL</span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <!-- About Section -->
         <section class="section" id="about">
             <div class="container">
@@ -592,6 +682,42 @@
                                 </a>
                             </div>
                         </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- How I Work Section -->
+        <section class="section" id="process">
+            <div class="container">
+                <div class="section-header">
+                    <div class="section-tag">
+                        <i class="fa-solid fa-route"></i> Process
+                    </div>
+                    <h2 class="section-title">How I Work</h2>
+                    <p class="section-subtitle">From first audit to live operations — a clear, phased delivery model.</p>
+                </div>
+
+                <div class="process-grid">
+                    <div class="process-step">
+                        <span class="process-num">01</span>
+                        <h3>Audit</h3>
+                        <p>I map your current setup — plugins, hardware, traffic patterns, and pain points — before touching production.</p>
+                    </div>
+                    <div class="process-step">
+                        <span class="process-num">02</span>
+                        <h3>Architect</h3>
+                        <p>Secure, scalable design with clear ownership, integration points, and rollout milestones.</p>
+                    </div>
+                    <div class="process-step">
+                        <span class="process-num">03</span>
+                        <h3>Deploy</h3>
+                        <p>Phased rollout with testing, backups, and staff training — zero-downtime where possible.</p>
+                    </div>
+                    <div class="process-step">
+                        <span class="process-num">04</span>
+                        <h3>Operate</h3>
+                        <p>Ongoing tuning, monitoring, and support as your player count and features grow.</p>
                     </div>
                 </div>
             </div>
