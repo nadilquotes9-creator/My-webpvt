@@ -148,6 +148,22 @@ h1, h2, h3, h4, h5, h6 {
     line-height: 1.25;
 }
 
+.section-title {
+    background: linear-gradient(135deg, #1e3a8a 0%, #2563eb 50%, #60a5fa 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.section-subtitle {
+    color: var(--text-secondary);
+}
+
+.section-subtitle strong {
+    color: #2563eb;
+    font-weight: 600;
+}
+
 p {
     color: var(--text-secondary);
 }
@@ -156,6 +172,10 @@ a {
     color: inherit;
     text-decoration: none;
     transition: all 0.15s ease;
+}
+
+a:hover {
+    color: #2563eb;
 }
 
 /* ==========================================================================
@@ -529,7 +549,10 @@ a {
 .stat-value {
     font-size: 1.15rem;
     font-weight: 700;
-    color: var(--text-primary);
+    background: linear-gradient(135deg, #1e3a8a 0%, #2563eb 50%, #60a5fa 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
     font-family: var(--font-mono);
     letter-spacing: -0.02em;
 }
@@ -797,18 +820,23 @@ a {
 .node-metric {
     font-family: var(--font-mono);
     font-size: 0.8rem;
-    color: var(--text-secondary);
-    background: rgba(15, 23, 42, 0.04);
+    color: #2563eb;
+    background: rgba(219, 234, 254, 0.6);
     padding: 0.15rem 0.5rem;
     border-radius: var(--radius-xs);
-    border: 1px solid var(--border-subtle);
+    border: 1px solid rgba(147, 197, 253, 0.3);
+    font-weight: 600;
 }
 
 .node-ping {
     font-family: var(--font-mono);
     font-size: 0.8rem;
     font-weight: 600;
-    color: #15803d;
+    color: #2563eb;
+    background: rgba(219, 234, 254, 0.6);
+    padding: 0.15rem 0.5rem;
+    border-radius: var(--radius-xs);
+    border: 1px solid rgba(147, 197, 253, 0.3);
 }
 
 /* Feature Checklist */
@@ -1190,7 +1218,10 @@ a {
     align-items: center;
     gap: 0.6rem;
     margin-bottom: 0.25rem;
-    color: var(--text-primary);
+    background: linear-gradient(135deg, #1e3a8a 0%, #2563eb 50%, #60a5fa 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .skill-card {
@@ -1252,7 +1283,10 @@ a {
     font-family: var(--font-mono);
     font-size: 0.78rem;
     font-weight: 600;
-    color: var(--text-muted);
+    background: linear-gradient(135deg, #1e3a8a 0%, #2563eb 50%, #60a5fa 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .progress-bar {
@@ -1450,11 +1484,13 @@ a {
 .tech-tags span {
     font-family: var(--font-mono);
     font-size: 0.72rem;
-    color: var(--text-secondary);
-    background: var(--bg-surface);
-    border: 1px solid var(--border-subtle);
+    color: #2563eb;
+    background: linear-gradient(135deg, rgba(219, 234, 254, 0.8) 0%, rgba(191, 219, 254, 0.6) 100%);
+    border: 1px solid rgba(147, 197, 253, 0.3);
     padding: 0.2rem 0.55rem;
     border-radius: var(--radius-xs);
+    font-weight: 600;
+    box-shadow: 0 1px 4px rgba(147, 197, 253, 0.15);
 }
 
 .project-footer {
@@ -2121,7 +2157,10 @@ a {
 .mock-stat strong {
     font-size: 1rem;
     font-weight: 700;
-    color: var(--text-primary);
+    background: linear-gradient(135deg, #1e3a8a 0%, #2563eb 50%, #60a5fa 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .mock-bars {
@@ -2221,8 +2260,22 @@ a {
     font-weight: 600;
 }
 
-.proxy-node .ok { color: var(--success); }
-.proxy-node .warn { color: var(--warning); }
+.proxy-node .ok {
+    color: #2563eb;
+    font-weight: 600;
+    background: rgba(219, 234, 254, 0.6);
+    padding: 0.1rem 0.4rem;
+    border-radius: var(--radius-xs);
+    border: 1px solid rgba(147, 197, 253, 0.3);
+}
+.proxy-node .warn {
+    color: #d97706;
+    font-weight: 600;
+    background: rgba(254, 243, 199, 0.6);
+    padding: 0.1rem 0.4rem;
+    border-radius: var(--radius-xs);
+    border: 1px solid rgba(251, 191, 36, 0.3);
+}
 
 /* Build card body */
 .build-body {
@@ -2276,7 +2329,10 @@ a {
     font-family: var(--font-mono);
     font-size: 0.8rem;
     font-weight: 700;
-    color: var(--primary);
+    background: linear-gradient(135deg, #1e3a8a 0%, #2563eb 50%, #60a5fa 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
     display: block;
     margin-bottom: 0.75rem;
 }
