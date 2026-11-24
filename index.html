@@ -51,109 +51,205 @@
     </header>
 
     <main>
-        <!-- Hero Section -->
+        <!-- Hero Section (Spatial VisionOS Layout matching Screenshot) -->
         <section class="hero" id="home">
-            <div class="container hero-container">
-                <div class="hero-content">
-                    <div class="hero-badge">
-                        <i class="fa-solid fa-terminal"></i>
-                        <span>What I Do</span>
+            <div class="container">
+                <!-- VisionOS Spatial Top Header / Greeting -->
+                <div class="hero-header-row">
+                    <div>
+                        <h1 class="hero-greeting">Good afternoon, Nadil</h1>
+                        <p class="hero-sub-greeting">CeylonEsports Infrastructure Overview • Everything is operational</p>
                     </div>
-
-                    <h1 class="hero-title">
-                        Building Robust <br>
-                        <span class="typing-text">Minecraft Networks</span>
-                    </h1>
-
-                    <p class="hero-description">
-                        I am <strong>Nadil Havindu</strong> (<span class="code-tag">Nexiz_v2</span>), Owner of <strong>CeylonEsports Minecraft Network</strong>. Specializing in high-throughput network architectures, low-latency JVM optimization, custom game coding, and battle-hardened community moderation.
-                    </p>
-
-                    <div class="hero-actions">
-                        <a href="status.html" class="btn btn-primary">
-                            <i class="fa-solid fa-server"></i>
-                            <span>Network Telemetry</span>
-                        </a>
-                        <a href="#contact" class="btn btn-secondary">
-                            <i class="fa-solid fa-shield-halved"></i>
-                            <span>Admin Inquiry</span>
-                        </a>
+                    <div class="hero-quick-actions">
+                        <a href="status.html" class="btn-vision-pill glass-neutral"><i class="fa-solid fa-signal" style="color: var(--emerald-green);"></i> Live Status</a>
+                        <a href="#contact" class="btn-vision-pill coral"><i class="fa-solid fa-plus"></i> Inquire Network</a>
                     </div>
+                </div>
 
-                    <!-- Telemetry Stats Strip -->
-                    <div class="telemetry-strip">
-                        <div class="stat-card">
-                            <div class="stat-header">
-                                <span class="stat-label">NETWORK TPS</span>
-                                <i class="fa-solid fa-gauge-high stat-icon"></i>
-                            </div>
-                            <div class="stat-value">20.0 <span class="stat-unit">/ 20</span></div>
-                            <div class="stat-sub">Zero Tick Loss</div>
+                <!-- Main Middle Row: Signature Coral Hero Card + Right Schedule Card -->
+                <div class="hero-grid">
+                    <!-- Main Coral Frosted Card -->
+                    <div class="coral-hero-card">
+                        <div class="coral-top-row">
+                            <span class="coral-pill-badge">
+                                <span class="coral-pill-dot"></span> Cluster 01 • 3 Nodes Online
+                            </span>
+                            <span style="font-family: var(--font-mono); font-size: 0.75rem; opacity: 0.85;">LK-CMB REGION</span>
                         </div>
 
-                        <div class="stat-card">
-                            <div class="stat-header">
-                                <span class="stat-label">SERVER CORES</span>
-                                <i class="fa-solid fa-microchip stat-icon"></i>
+                        <div class="coral-card-body">
+                            <div>
+                                <h2 class="coral-card-title">Architecting scalable <em>network</em> solutions</h2>
+                                <p class="coral-card-desc">
+                                    I am <strong>Nadil Havindu (Nexiz_v2)</strong>, Owner of <strong>CeylonEsports Minecraft Network</strong>. Specializing in high-throughput network architectures, low-latency JVM optimization, custom game coding, and battle-hardened community moderation.
+                                </p>
                             </div>
-                            <div class="stat-value">Purpur & Velocity</div>
-                            <div class="stat-sub">Multi-Proxy Cluster</div>
+
+                            <!-- Circular Gauge Widget (from screenshot) -->
+                            <div class="ring-widget-wrap">
+                                <div class="circular-gauge">
+                                    <svg class="gauge-svg" viewBox="0 0 140 140">
+                                        <circle class="gauge-bg-circle" cx="70" cy="70" r="56"></circle>
+                                        <circle class="gauge-progress-circle" cx="70" cy="70" r="56"></circle>
+                                    </svg>
+                                    <div class="gauge-center-text">
+                                        <div class="gauge-pct">20.0</div>
+                                        <div class="gauge-label">TPS Max</div>
+                                    </div>
+                                    <div class="gauge-node-dot node-pos-1" title="Lobby Node"><i class="fa-solid fa-server"></i></div>
+                                    <div class="gauge-node-dot node-pos-2" title="Velocity Proxy"><i class="fa-solid fa-route"></i></div>
+                                    <div class="gauge-node-dot node-pos-3" title="SMP Node"><i class="fa-solid fa-gamepad"></i></div>
+                                    <div class="gauge-node-dot node-pos-4" title="Anti-Cheat"><i class="fa-solid fa-shield"></i></div>
+                                </div>
+                            </div>
                         </div>
 
-                        <div class="stat-card">
-                            <div class="stat-header">
-                                <span class="stat-label">MODERATION</span>
-                                <i class="fa-solid fa-shield-cat stat-icon"></i>
+                        <div class="coral-stats-row">
+                            <div class="coral-mini-stat">
+                                <strong>20.0</strong>
+                                <span>TPS Stability</span>
                             </div>
-                            <div class="stat-value">Active Anti-Cheat</div>
-                            <div class="stat-sub">24/7 Threat Mitigation</div>
+                            <div class="coral-mini-stat">
+                                <strong>Purpur</strong>
+                                <span>Core Engine</span>
+                            </div>
+                            <div class="coral-mini-stat">
+                                <strong>99.98%</strong>
+                                <span>Uptime</span>
+                            </div>
+                        </div>
+
+                        <div class="coral-actions-row">
+                            <a href="status.html" class="btn-vision-pill white">
+                                <span>Network Telemetry</span>
+                                <i class="fa-solid fa-arrow-up-right-from-square" style="font-size: 0.75rem;"></i>
+                            </a>
+                            <a href="#contact" class="btn-vision-pill translucent">
+                                <i class="fa-solid fa-plus"></i>
+                                <span>Admin Inquiry</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Right Side Schedule / Nodes Card (from screenshot) -->
+                    <div class="side-schedule-card">
+                        <div>
+                            <div class="calendar-top-header">
+                                <div>
+                                    <div class="cal-date-big">2026</div>
+                                    <div class="cal-day-label">Infrastructure Timeline</div>
+                                    <span class="cal-sub-meta">Cluster Nodes • Active Routing</span>
+                                </div>
+                                <div class="cal-icon-btn">
+                                    <i class="fa-regular fa-calendar"></i>
+                                </div>
+                            </div>
+
+                            <!-- Mini Days Strip -->
+                            <div class="calendar-days-strip">
+                                <div class="day-chip"><span>M</span><span>09</span></div>
+                                <div class="day-chip active"><span>T</span><span>10</span></div>
+                                <div class="day-chip"><span>W</span><span>11</span></div>
+                                <div class="day-chip"><span>T</span><span>12</span></div>
+                                <div class="day-chip"><span>F</span><span>13</span></div>
+                                <div class="day-chip"><span>S</span><span>14</span></div>
+                                <div class="day-chip"><span>S</span><span>15</span></div>
+                            </div>
+
+                            <!-- Live Events / Schedule List -->
+                            <div class="schedule-events-list">
+                                <div class="schedule-event-item">
+                                    <span class="event-time-pill">04ms</span>
+                                    <div class="event-details">
+                                        <strong>Lobby Node-01</strong>
+                                        <span>Purpur Spigot • Velocity Balancing</span>
+                                    </div>
+                                </div>
+
+                                <div class="schedule-event-item">
+                                    <span class="event-time-pill">09ms</span>
+                                    <div class="event-details">
+                                        <strong>Survival SMP Node</strong>
+                                        <span>Zero Tick Loss • Aikar's Flags</span>
+                                    </div>
+                                </div>
+
+                                <div class="schedule-event-item">
+                                    <span class="event-time-pill" style="color: var(--coral-primary); background: rgba(223,66,52,0.12);">06ms</span>
+                                    <div class="event-details">
+                                        <strong>Esports Arena</strong>
+                                        <span>Active ML Anti-Cheat Pipeline</span>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
 
-                <div class="hero-visual">
-                    <div class="what-i-do-card">
-                        <div class="what-i-do-header">
-                            <i class="fa-solid fa-layer-group accent-icon"></i>
-                            <h3>What I Do</h3>
+                <!-- 4-Column Spatial Metric Cards Row (Matching Screenshot Bottom Row) -->
+                <div class="spatial-metrics-row">
+                    <!-- Card 1: Active Players / TPS -->
+                    <div class="spatial-stat-card">
+                        <div class="stat-card-top">
+                            <div class="stat-icon-disc"><i class="fa-solid fa-gauge-high" style="color: var(--coral-primary);"></i></div>
+                            <span class="stat-change-chip green"><i class="fa-solid fa-arrow-up"></i> 20.0</span>
                         </div>
-                        <div class="what-i-do-list">
-                            <div class="what-i-do-item">
-                                <i class="fa-solid fa-server"></i>
-                                <div>
-                                    <strong>Server Architecture</strong>
-                                    <span>Purpur, Velocity, BungeeCord clustering</span>
-                                </div>
-                            </div>
-                            <div class="what-i-do-item">
-                                <i class="fa-solid fa-code"></i>
-                                <div>
-                                    <strong>Plugin Development</strong>
-                                    <span>Custom plugins, scripts, and SQL integration</span>
-                                </div>
-                            </div>
-                            <div class="what-i-do-item">
-                                <i class="fa-solid fa-shield-halved"></i>
-                                <div>
-                                    <strong>Moderation & Security</strong>
-                                    <span>Anti-cheat, staff tools, audit logs</span>
-                                </div>
-                            </div>
-                            <div class="what-i-do-item">
-                                <i class="fa-solid fa-chart-line"></i>
-                                <div>
-                                    <strong>Network Monitoring</strong>
-                                    <span>TPS, latency, uptime dashboards</span>
-                                </div>
-                            </div>
-                            <div class="what-i-do-item">
-                                <i class="fa-solid fa-users"></i>
-                                <div>
-                                    <strong>Community Management</strong>
-                                    <span>Staff training, rule frameworks, Discord</span>
-                                </div>
-                            </div>
+                        <div>
+                            <div class="stat-big-num">20.0 <span style="font-size: 1rem; color: var(--text-muted);">/ 20</span></div>
+                            <div class="stat-title-label">Network TPS</div>
+                            <div class="stat-sub-note">Zero Tick Loss Garbage Collection</div>
                         </div>
+                        <svg class="stat-sparkline" viewBox="0 0 100 25" preserveAspectRatio="none">
+                            <path d="M0,20 Q20,15 35,18 T70,8 T100,5" fill="none" stroke="#10b981" stroke-width="2.5" stroke-linecap="round"></path>
+                        </svg>
+                    </div>
+
+                    <!-- Card 2: Server Cores -->
+                    <div class="spatial-stat-card">
+                        <div class="stat-card-top">
+                            <div class="stat-icon-disc"><i class="fa-solid fa-microchip" style="color: #2563eb;"></i></div>
+                            <span class="stat-change-chip green"><i class="fa-solid fa-arrow-up"></i> +100%</span>
+                        </div>
+                        <div>
+                            <div class="stat-big-num">Purpur</div>
+                            <div class="stat-title-label">Server Cores</div>
+                            <div class="stat-sub-note">Velocity Multi-Proxy Cluster</div>
+                        </div>
+                        <svg class="stat-sparkline" viewBox="0 0 100 25" preserveAspectRatio="none">
+                            <path d="M0,18 Q25,22 45,12 T75,10 T100,4" fill="none" stroke="#10b981" stroke-width="2.5" stroke-linecap="round"></path>
+                        </svg>
+                    </div>
+
+                    <!-- Card 3: Active Anti-Cheat (Signature Coral Card from Screenshot) -->
+                    <div class="spatial-stat-card coral-variant">
+                        <div class="stat-card-top">
+                            <div class="stat-icon-disc"><i class="fa-solid fa-shield-halved" style="color: #ffffff;"></i></div>
+                            <span class="stat-change-chip white-chip"><i class="fa-solid fa-shield"></i> 24/7</span>
+                        </div>
+                        <div>
+                            <div class="stat-big-num">Enforcing</div>
+                            <div class="stat-title-label">Active Anti-Cheat</div>
+                            <div class="stat-sub-note">Threat Mitigation Engine</div>
+                        </div>
+                        <svg class="stat-sparkline" viewBox="0 0 100 25" preserveAspectRatio="none">
+                            <path d="M0,15 Q30,8 55,16 T85,12 T100,6" fill="none" stroke="#ffffff" stroke-width="2.5" stroke-linecap="round"></path>
+                        </svg>
+                    </div>
+
+                    <!-- Card 4: System Uptime -->
+                    <div class="spatial-stat-card">
+                        <div class="stat-card-top">
+                            <div class="stat-icon-disc"><i class="fa-solid fa-signal" style="color: var(--emerald-green);"></i></div>
+                            <span class="stat-change-chip green"><i class="fa-solid fa-arrow-up"></i> +0.4%</span>
+                        </div>
+                        <div>
+                            <div class="stat-big-num">99.98%</div>
+                            <div class="stat-title-label">System Uptime</div>
+                            <div class="stat-sub-note">LK-CMB Dedicated Node</div>
+                        </div>
+                        <svg class="stat-sparkline" viewBox="0 0 100 25" preserveAspectRatio="none">
+                            <path d="M0,22 Q20,18 40,20 T70,12 T100,5" fill="none" stroke="#10b981" stroke-width="2.5" stroke-linecap="round"></path>
+                        </svg>
                     </div>
                 </div>
             </div>
