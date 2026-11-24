@@ -4,36 +4,14 @@
 // ==========================================================================
 
 document.addEventListener('DOMContentLoaded', () => {
-    // 1. Mobile Menu Toggle
-    const menuToggle = document.getElementById('menuToggle');
-    const navLinks = document.getElementById('navLinks');
-    const navItems = document.querySelectorAll('.nav-item');
+    // 1. Sidebar Toggle & Nav Item Active Handling
+    const spatialSidebar = document.getElementById('spatialSidebar');
+    const sidebarToggleBtn = document.getElementById('sidebarToggleBtn');
+    const sidebarItems = document.querySelectorAll('.sidebar-item, .nav-item');
 
-    if (menuToggle && navLinks) {
-        menuToggle.addEventListener('click', () => {
-            navLinks.classList.toggle('active');
-            const icon = menuToggle.querySelector('i');
-            if (icon) {
-                if (navLinks.classList.contains('active')) {
-                    icon.classList.remove('fa-bars');
-                    icon.classList.add('fa-xmark');
-                } else {
-                    icon.classList.remove('fa-xmark');
-                    icon.classList.add('fa-bars');
-                }
-            }
-        });
-
-        // Close menu when clicking any nav item
-        navItems.forEach(item => {
-            item.addEventListener('click', () => {
-                navLinks.classList.remove('active');
-                const icon = menuToggle.querySelector('i');
-                if (icon) {
-                    icon.classList.remove('fa-xmark');
-                    icon.classList.add('fa-bars');
-                }
-            });
+    if (sidebarToggleBtn && spatialSidebar) {
+        sidebarToggleBtn.addEventListener('click', () => {
+            spatialSidebar.classList.toggle('expanded');
         });
     }
 
@@ -44,11 +22,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
         sections.forEach(current => {
             const sectionHeight = current.offsetHeight;
-            const sectionTop = current.offsetTop - 120;
+            const sectionTop = current.offsetTop - 140;
             const sectionId = current.getAttribute('id');
 
             if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
-                navItems.forEach(item => {
+                sidebarItems.forEach(item => {
                     item.classList.remove('active');
                     if (item.getAttribute('href') === `#${sectionId}`) {
                         item.classList.add('active');
