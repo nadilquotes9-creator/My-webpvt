@@ -11,16 +11,16 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <style>
         :root {
-            --bg-base: #06070a;
-            --bg-card: rgba(18, 22, 34, 0.65);
-            --bg-card-sub: rgba(255, 255, 255, 0.04);
-            --border: rgba(255, 255, 255, 0.08);
-            --border-hover: rgba(255, 255, 255, 0.20);
-            --green: #34d399;
-            --green-glow: rgba(52, 211, 153, 0.25);
-            --red: #f43f5e;
-            --text-main: #ffffff;
-            --text-secondary: rgba(255, 255, 255, 0.70);
+            --bg-base: #ffffff;
+            --bg-card: #ffffff;
+            --bg-card-sub: #f6f7f9;
+            --border: rgba(15, 23, 42, 0.10);
+            --border-hover: rgba(15, 23, 42, 0.18);
+            --green: #16a34a;
+            --green-glow: rgba(22, 163, 74, 0.18);
+            --red: #dc2626;
+            --text-main: #0b1220;
+            --text-secondary: #5c6573;
             --font-sans: 'Inter', -apple-system, sans-serif;
             --font-mono: 'JetBrains Mono', monospace;
         }
@@ -47,12 +47,11 @@
             top: 0;
             left: 50%;
             transform: translateX(-50%);
-            width: 1000px;
-            height: 480px;
-            background: radial-gradient(ellipse at top, rgba(99, 102, 241, 0.12) 0%, rgba(52, 211, 153, 0.08) 45%, transparent 75%);
+            width: 900px;
+            height: 380px;
+            background: radial-gradient(ellipse at top, rgba(37, 99, 235, 0.08) 0%, transparent 70%);
             pointer-events: none;
             z-index: 0;
-            filter: blur(50px);
         }
 
         .container {
@@ -67,9 +66,8 @@
         header.header {
             padding: 1.5rem 0;
             border-bottom: 1px solid var(--border);
-            background: rgba(6, 7, 10, 0.75);
-            backdrop-filter: blur(20px);
-            -webkit-backdrop-filter: blur(20px);
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(12px);
         }
 
         .header-wrap {
@@ -83,7 +81,7 @@
             align-items: center;
             gap: 0.75rem;
             text-decoration: none;
-            color: #ffffff;
+            color: #0b1220;
             font-weight: 700;
             font-size: 1.15rem;
         }
@@ -105,22 +103,20 @@
             display: inline-flex;
             align-items: center;
             gap: 0.5rem;
-            background: rgba(255, 255, 255, 0.05);
-            backdrop-filter: blur(12px);
-            color: #ffffff;
+            background: var(--bg-card-sub);
+            color: #0b1220;
             padding: 0.5rem 1.1rem;
             border-radius: 9999px;
             border: 1px solid var(--border);
             text-decoration: none;
             font-size: 0.85rem;
             font-weight: 600;
-            transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+            transition: all 0.2s;
         }
 
         .btn-portal:hover {
-            border-color: var(--border-hover);
-            background: rgba(255, 255, 255, 0.1);
-            transform: translateY(-2px);
+            border-color: rgba(15, 23, 42, 0.22);
+            transform: translateY(-1px);
         }
 
         /* Banner Status Box */
@@ -131,23 +127,15 @@
 
         .main-banner {
             background: var(--bg-card);
-            backdrop-filter: blur(16px) saturate(180%);
-            -webkit-backdrop-filter: blur(16px) saturate(180%);
             border: 1px solid var(--border);
-            border-radius: 1.25rem;
+            border-radius: 16px;
             padding: 2.5rem 2rem;
             display: flex;
             flex-direction: column;
             align-items: center;
-            box-shadow: inset 0 1px 0 0 rgba(255, 255, 255, 0.12), 0 16px 40px rgba(0, 0, 0, 0.7);
+            box-shadow: 0 16px 40px rgba(15, 23, 42, 0.06);
             position: relative;
             overflow: hidden;
-            transition: transform 0.25s ease, border-color 0.25s ease;
-        }
-
-        .main-banner:hover {
-            transform: translateY(-5px);
-            border-color: var(--border-hover);
         }
 
         .main-banner::before {
@@ -187,14 +175,14 @@
             display: inline-flex;
             align-items: center;
             gap: 0.6rem;
-            background: rgba(255, 255, 255, 0.05);
+            background: var(--bg-card-sub);
             border: 1px solid var(--border);
             padding: 0.5rem 1.2rem;
             border-radius: 8px;
             font-family: var(--font-mono);
             font-size: 0.95rem;
             cursor: pointer;
-            color: #ffffff;
+            color: #0b1220;
             margin-top: 1rem;
             transition: all 0.2s;
         }
@@ -214,22 +202,13 @@
 
         .stat-card {
             background: var(--bg-card);
-            backdrop-filter: blur(16px) saturate(180%);
-            -webkit-backdrop-filter: blur(16px) saturate(180%);
             border: 1px solid var(--border);
-            border-radius: 1.25rem;
-            padding: 1.25rem 1.45rem;
-            box-shadow: inset 0 1px 0 0 rgba(255, 255, 255, 0.12), 0 10px 30px -10px rgba(0, 0, 0, 0.65);
-            transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.25s ease;
-        }
-
-        .stat-card:hover {
-            transform: translateY(-5px);
-            border-color: var(--border-hover);
+            border-radius: 12px;
+            padding: 1.25rem;
         }
 
         .stat-card .label {
-            font-size: 0.8rem;
+            font-size: 0.75rem;
             text-transform: uppercase;
             letter-spacing: 0.05em;
             color: var(--text-secondary);
@@ -238,28 +217,19 @@
         }
 
         .stat-card .value {
-            font-size: 1.45rem;
+            font-size: 1.35rem;
             font-weight: 700;
             font-family: var(--font-mono);
-            color: #ffffff;
+            color: #0b1220;
         }
 
         /* Group Sections */
         .status-group {
             background: var(--bg-card);
-            backdrop-filter: blur(16px) saturate(180%);
-            -webkit-backdrop-filter: blur(16px) saturate(180%);
             border: 1px solid var(--border);
-            border-radius: 1.25rem;
-            padding: 1.75rem 2rem;
+            border-radius: 16px;
+            padding: 1.5rem 2rem;
             margin-bottom: 1.5rem;
-            box-shadow: inset 0 1px 0 0 rgba(255, 255, 255, 0.12), 0 10px 30px -10px rgba(0, 0, 0, 0.65);
-            transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.25s ease;
-        }
-
-        .status-group:hover {
-            transform: translateY(-3px);
-            border-color: var(--border-hover);
         }
 
         .group-header {
@@ -279,7 +249,6 @@
             display: flex;
             align-items: center;
             gap: 0.6rem;
-            color: #ffffff;
         }
 
         .group-badge {
@@ -306,7 +275,7 @@
             align-items: center;
             gap: 1.5rem;
             padding: 0.9rem 0;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            border-bottom: 1px solid rgba(15, 23, 42, 0.06);
         }
 
         .service-row:last-child {
@@ -320,7 +289,6 @@
             gap: 0.6rem;
             font-size: 0.92rem;
             font-weight: 500;
-            color: #ffffff;
         }
 
         .service-dot {
@@ -367,7 +335,7 @@
             font-family: var(--font-mono);
             font-size: 0.85rem;
             font-weight: 600;
-            color: #ffffff;
+            color: #0b1220;
             text-align: right;
         }
 

@@ -80,39 +80,33 @@
                         </a>
                     </div>
 
-                    <!-- Telemetry Stats Strip (StatsCard from framer-motion) -->
+                    <!-- Telemetry Stats Strip -->
                     <div class="telemetry-strip">
-                        <div class="stat-card glass-card p-6 rounded-2xl">
+                        <div class="stat-card">
                             <div class="stat-header">
-                                <span class="stat-label text-sm text-white/60">NETWORK TPS</span>
+                                <span class="stat-label">NETWORK TPS</span>
                                 <i class="fa-solid fa-gauge-high stat-icon"></i>
                             </div>
-                            <div class="stat-value text-2xl font-bold text-white">20.0 <span class="stat-unit">/ 20</span></div>
-                            <div class="stat-sub flex items-center gap-1 text-sm text-emerald-400">
-                                <i class="fa-solid fa-arrow-trend-up"></i> Zero Tick Loss (100%)
-                            </div>
+                            <div class="stat-value">20.0 <span class="stat-unit">/ 20</span></div>
+                            <div class="stat-sub">Zero Tick Loss</div>
                         </div>
 
-                        <div class="stat-card glass-card p-6 rounded-2xl">
+                        <div class="stat-card">
                             <div class="stat-header">
-                                <span class="stat-label text-sm text-white/60">SERVER CORES</span>
+                                <span class="stat-label">SERVER CORES</span>
                                 <i class="fa-solid fa-microchip stat-icon"></i>
                             </div>
-                            <div class="stat-value text-2xl font-bold text-white">Purpur & Velocity</div>
-                            <div class="stat-sub flex items-center gap-1 text-sm text-emerald-400">
-                                <i class="fa-solid fa-arrow-trend-up"></i> Multi-Proxy Cluster
-                            </div>
+                            <div class="stat-value">Purpur & Velocity</div>
+                            <div class="stat-sub">Multi-Proxy Cluster</div>
                         </div>
 
-                        <div class="stat-card glass-card p-6 rounded-2xl">
+                        <div class="stat-card">
                             <div class="stat-header">
-                                <span class="stat-label text-sm text-white/60">MODERATION</span>
+                                <span class="stat-label">MODERATION</span>
                                 <i class="fa-solid fa-shield-cat stat-icon"></i>
                             </div>
-                            <div class="stat-value text-2xl font-bold text-white">Active Anti-Cheat</div>
-                            <div class="stat-sub flex items-center gap-1 text-sm text-emerald-400">
-                                <i class="fa-solid fa-arrow-trend-up"></i> 24/7 Threat Mitigation
-                            </div>
+                            <div class="stat-value">Active Anti-Cheat</div>
+                            <div class="stat-sub">24/7 Threat Mitigation</div>
                         </div>
                     </div>
                 </div>
@@ -242,54 +236,21 @@
                     </div>
                 </div>
 
-                <!-- macOS Code Terminal Window matching User Screenshot -->
-                <div class="code-window glass-card rounded-2xl">
-                    <div class="code-window-header">
-                        <div class="mac-dots">
-                            <span class="mac-dot red"></span>
-                            <span class="mac-dot yellow"></span>
-                            <span class="mac-dot green"></span>
-                        </div>
-                        <span class="code-window-title"><i class="fa-solid fa-code" style="color: var(--emerald); margin-right: 6px;"></i>StatsCard.jsx</span>
-                        <span class="code-window-tag">jsx</span>
-                    </div>
-                    <div class="code-content">
-<pre><code><span class="line-num">1</span><span class="token-kw">import</span> <span class="token-punct">{</span> <span class="token-comp">motion</span> <span class="token-punct">}</span> <span class="token-kw">from</span> <span class="token-str">'framer-motion'</span><span class="token-punct">;</span>
-<span class="line-num">2</span><span class="token-kw">import</span> <span class="token-punct">{</span> <span class="token-comp">ShoppingBag</span><span class="token-punct">,</span> <span class="token-comp">Users</span><span class="token-punct">,</span> <span class="token-comp">DollarSign</span><span class="token-punct">,</span> <span class="token-comp">ArrowUpRight</span> <span class="token-punct">}</span> <span class="token-kw">from</span> <span class="token-str">'lucide-react'</span><span class="token-punct">;</span>
-<span class="line-num">3</span>
-<span class="line-num">4</span><span class="token-kw">const</span> <span class="token-fn">StatsCard</span> <span class="token-punct">=</span> <span class="token-punct">({</span> <span class="token-var">title</span><span class="token-punct">,</span> <span class="token-var">value</span><span class="token-punct">,</span> <span class="token-var">change</span><span class="token-punct">,</span> <span class="token-var">icon</span><span class="token-punct">:</span> <span class="token-comp">Icon</span><span class="token-punct">,</span> <span class="token-var">gradient</span> <span class="token-punct">})</span> <span class="token-kw">=&gt;</span> <span class="token-punct">{</span>
-<span class="line-num">5</span>  <span class="token-kw">return</span> <span class="token-punct">(</span>
-<span class="line-num">6</span>    <span class="token-punct">&lt;</span><span class="token-comp">motion.div</span> <span class="token-prop">whileHover</span><span class="token-punct">={{</span> <span class="token-var">y</span><span class="token-punct">:</span> <span class="token-kw">-5</span> <span class="token-punct">}}</span> <span class="token-prop">className</span><span class="token-punct">=</span><span class="token-str">"glass-card p-6 rounded-2xl"</span><span class="token-punct">&gt;</span>
-<span class="line-num">7</span>      <span class="token-punct">&lt;</span><span class="token-comp">div</span> <span class="token-prop">className</span><span class="token-punct">=</span><span class="token-str">"flex items-center justify-between"</span><span class="token-punct">&gt;</span>
-<span class="line-num">8</span>        <span class="token-punct">&lt;</span><span class="token-comp">div</span><span class="token-punct">&gt;</span>
-<span class="line-num">9</span>          <span class="token-punct">&lt;</span><span class="token-comp">p</span> <span class="token-prop">className</span><span class="token-punct">=</span><span class="token-str">"text-sm text-white/60"</span><span class="token-punct">&gt;{</span><span class="token-var">title</span><span class="token-punct">}&lt;/</span><span class="token-comp">p</span><span class="token-punct">&gt;</span>
-<span class="line-num">10</span>         <span class="token-punct">&lt;</span><span class="token-comp">h2</span> <span class="token-prop">className</span><span class="token-punct">=</span><span class="token-str">"text-2xl font-bold text-white"</span><span class="token-punct">&gt;{</span><span class="token-var">value</span><span class="token-punct">}&lt;/</span><span class="token-comp">h2</span><span class="token-punct">&gt;</span>
-<span class="line-num">11</span>         <span class="token-punct">&lt;</span><span class="token-comp">p</span> <span class="token-prop">className</span><span class="token-punct">=</span><span class="token-str">"flex items-center gap-1 text-sm text-emerald-400"</span><span class="token-punct">&gt;</span>
-<span class="line-num">12</span>           <span class="token-punct">&lt;</span><span class="token-comp">ArrowUpRight</span> <span class="token-prop">size</span><span class="token-punct">={</span><span class="token-str">16</span><span class="token-punct">}</span> <span class="token-punct">/&gt;</span> <span class="token-punct">{</span><span class="token-var">change</span><span class="token-punct">}</span>%
-<span class="line-num">13</span>         <span class="token-punct">&lt;/</span><span class="token-comp">p</span><span class="token-punct">&gt;</span>
-<span class="line-num">14</span>       <span class="token-punct">&lt;/</span><span class="token-comp">div</span><span class="token-punct">&gt;</span>
-<span class="line-num">15</span>     <span class="token-punct">&lt;/</span><span class="token-comp">div</span><span class="token-punct">&gt;</span>
-<span class="line-num">16</span>   <span class="token-punct">&lt;/</span><span class="token-comp">motion.div</span><span class="token-punct">&gt;</span>
-<span class="line-num">17</span> <span class="token-punct">);</span>
-<span class="line-num">18</span><span class="token-punct">};</span></code></pre>
-                    </div>
-                </div>
-
                 <!-- Dev Console Card -->
-                <div class="console-card glass-card rounded-2xl" style="margin-top: 1.5rem; padding: 1.5rem;">
-                    <div class="console-head" style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 0.85rem;">
-                        <div class="console-title-group" style="display: flex; align-items: center; gap: 0.65rem;">
+                <div class="console-card">
+                    <div class="console-head">
+                        <div class="console-title-group">
                             <i class="fa-solid fa-terminal accent-icon"></i>
-                            <h3 style="font-size: 1.05rem;">live-console.sh</h3>
+                            <h3>live-console.sh</h3>
                         </div>
                         <span class="badge-status online">RUNNING</span>
                     </div>
-                    <div class="console-body" style="font-family: var(--font-mono); font-size: 0.85rem; line-height: 1.7; color: var(--text-secondary);">
-                        <p><span class="prompt" style="color: var(--emerald); font-weight: 700;">$</span> nexiz --cluster status --json</p>
-                        <p><span class="comment" style="color: var(--text-muted);">// cluster: ceylonesports | region: LK-CMB</span></p>
-                        <p><span class="comment" style="color: var(--text-muted);">// tps: 20.0 | ping: 14ms | db: mysql-primary (1.2ms)</span></p>
-                        <p><span class="comment" style="color: var(--text-muted);">// proxy: velocity-3 | plugins: 84 | uptime: 99.98%</span></p>
-                        <p><span class="prompt" style="color: var(--emerald); font-weight: 700;">$</span> <span class="cursor" style="color: var(--emerald); animation: statusPulse 1s infinite;">▊</span></p>
+                    <div class="console-body">
+                        <p><span class="prompt">$</span> nexiz --cluster status --json</p>
+                        <p><span class="comment">// cluster: ceylonesports | region: LK-CMB</span></p>
+                        <p><span class="comment">// tps: 20.0 | ping: 14ms | db: mysql-primary (1.2ms)</span></p>
+                        <p><span class="comment">// proxy: velocity-3 | plugins: 84 | uptime: 99.98%</span></p>
+                        <p><span class="prompt">$</span> <span class="cursor">▊</span></p>
                     </div>
                 </div>
             </div>
