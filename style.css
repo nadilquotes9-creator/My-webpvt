@@ -924,13 +924,34 @@ body {
     border: 1px solid var(--border-glass-subtle);
     padding: 0.75rem 0.95rem;
     border-radius: var(--radius-md);
-    transition: all 0.18s ease;
+    transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+    text-decoration: none;
+    color: inherit;
 }
 
 .schedule-event-item:hover {
     background: #ffffff;
     border-color: var(--border-glass);
-    transform: translateX(2px);
+    transform: translateY(-2px) scale(1.01);
+    box-shadow: 0 8px 20px -6px rgba(110, 80, 60, 0.12), inset 0 1px 0 #ffffff;
+}
+
+.project-event-link {
+    cursor: pointer;
+}
+
+.event-arrow-icon {
+    margin-left: auto;
+    font-size: 0.78rem;
+    color: var(--text-muted);
+    transition: all 0.2s ease;
+    opacity: 0.65;
+}
+
+.schedule-event-item:hover .event-arrow-icon {
+    color: var(--coral-primary);
+    opacity: 1;
+    transform: translate(2px, -2px);
 }
 
 .event-time-pill {
