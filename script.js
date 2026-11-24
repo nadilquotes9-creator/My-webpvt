@@ -127,4 +127,52 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     }
+
+    // 5. Dynamic Live Calendar & Real-Time Date/Clock Widget
+    function updateLiveCalendar() {
+        const now = new Date();
+        const calDayNum = document.getElementById('calDayNum');
+        const calDayName = document.getElementById('calDayName');
+        const calSubMeta = document.getElementById('calSubMeta');
+        const calendarDaysStrip = document.getElementById('calendarDaysStrip');
+
+        if (calDayNum && calDayName && calSubMeta) {
+            const dayNum = String(now.getDate()).padStart(2, '0');
+            const weekdays = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+            const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+            
+            calDayNum.textContent = dayNum;
+            calDayName.textContent = weekdays[now.getDay()];
+
+            // Format real clock time
+            const hours = String(now.getHours()).padStart(2, '0');
+            const minutes = String(now.getMinutes()).padStart(2, '0');
+            const seconds = String(now.getSeconds()).padStart(2, '0');
+            calSubMeta.innerHTML = `${months[now.getMonth()]} ${now.getFullYear()} • <span id="realTimeClock">${hours}:${minutes}:${seconds}</span> (GMT+5:30)`;
+
+            // Dynamically generate current week (Monday to Sunday)
+            if (calendarDaysStrip && (!calendarDaysStrip.dataset.generatedDate || calendarDaysStrip.dataset.generatedDate !== now.toDateString())) {
+                calendarDaysStrip.dataset.generatedDate = now.toDateString();
+                const currentDay = now.getDay();
+                const distanceToMonday = (currentDay + 6) % 7;
+                const monday = new Date(now);
+                monday.setDate(now.getDate() - distanceToMonday);
+
+                const dayLetters = ['M', 'T', 'W', 'T', 'F', 'S', 'S'];
+                let stripHtml = '';
+
+                for (let i = 0; i < 7; i++) {
+                    const d = new Date(monday);
+                    d.setDate(monday.getDate() + i);
+                    const isToday = d.toDateString() === now.toDateString();
+                    const dNum = String(d.getDate()).padStart(2, '0');
+                    stripHtml += `<div class="day-chip ${isToday ? 'active' : ''}"><span>${dayLetters[i]}</span><span>${dNum}</span></div>`;
+                }
+                calendarDaysStrip.innerHTML = stripHtml;
+            }
+        }
+    }
+
+    updateLiveCalendar();
+    setInterval(updateLiveCalendar, 1000);
 });

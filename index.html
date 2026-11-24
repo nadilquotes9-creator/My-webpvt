@@ -188,36 +188,36 @@
                         </div>
                     </div>
 
-                    <!-- Right Side Featured Projects Card (Replacing nodes with user's 3 projects) -->
+                    <!-- Right Side Calendar & 3 Featured Projects Card -->
                     <div class="side-schedule-card">
                         <div>
                             <div class="calendar-top-header">
                                 <div>
-                                    <div class="cal-date-big">03</div>
-                                    <div class="cal-day-label">Featured Projects</div>
-                                    <span class="cal-sub-meta">Active Deployments & Architecture</span>
+                                    <div class="cal-date-big" id="calDayNum">24</div>
+                                    <div class="cal-day-label" id="calDayName">Tuesday</div>
+                                    <span class="cal-sub-meta" id="calSubMeta">November 2026 • <span id="realTimeClock">19:35</span> (GMT+5:30)</span>
                                 </div>
-                                <a href="#projects" class="cal-icon-btn" title="View All Deployments" aria-label="View Projects">
-                                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
-                                </a>
+                                <div class="cal-icon-btn" title="Live Schedule & Operations">
+                                    <i class="fa-regular fa-calendar"></i>
+                                </div>
                             </div>
 
-                            <!-- Mini Days / Filter Strip -->
-                            <div class="calendar-days-strip">
-                                <div class="day-chip active"><span>ALL</span><span>03</span></div>
-                                <div class="day-chip"><span>MC</span><span>01</span></div>
-                                <div class="day-chip"><span>SEC</span><span>02</span></div>
-                                <div class="day-chip"><span>WEB</span><span>03</span></div>
-                                <div class="day-chip"><span>JVM</span><span>20</span></div>
-                                <div class="day-chip"><span>SQL</span><span>01</span></div>
-                                <div class="day-chip"><span>OPS</span><span>24</span></div>
+                            <!-- Real-World Current Week Days Strip -->
+                            <div class="calendar-days-strip" id="calendarDaysStrip">
+                                <div class="day-chip"><span>M</span><span>23</span></div>
+                                <div class="day-chip active"><span>T</span><span>24</span></div>
+                                <div class="day-chip"><span>W</span><span>25</span></div>
+                                <div class="day-chip"><span>T</span><span>26</span></div>
+                                <div class="day-chip"><span>F</span><span>27</span></div>
+                                <div class="day-chip"><span>S</span><span>28</span></div>
+                                <div class="day-chip"><span>S</span><span>29</span></div>
                             </div>
 
-                            <!-- 3 User Projects (Replacing the 3 node items as requested) -->
+                            <!-- 3 User Projects with Real Operating Schedule Times -->
                             <div class="schedule-events-list">
                                 <!-- Project 1: CeylonEsports MC -->
                                 <a href="https://ceylonesportsmc.xyz/#home" target="_blank" rel="noopener noreferrer" class="schedule-event-item project-event-link" title="Open CeylonEsports MC">
-                                    <span class="event-time-pill" style="color: #10b981; background: rgba(16, 185, 129, 0.12);">LIVE</span>
+                                    <span class="event-time-pill" style="color: #10b981; background: rgba(16, 185, 129, 0.12);">09:00</span>
                                     <div class="event-details">
                                         <strong>CeylonEsports MC</strong>
                                         <span>Purpur Spigot • Velocity Balancing</span>
@@ -227,7 +227,7 @@
 
                                 <!-- Project 2: Security & Anti-Cheat Protocol -->
                                 <a href="#projects" class="schedule-event-item project-event-link" title="View Security & Anti-Cheat Engine">
-                                    <span class="event-time-pill" style="color: #6366f1; background: rgba(99, 102, 241, 0.12);">ACTIVE</span>
+                                    <span class="event-time-pill" style="color: #6366f1; background: rgba(99, 102, 241, 0.12);">14:30</span>
                                     <div class="event-details">
                                         <strong>Anti-Cheat & Security Engine</strong>
                                         <span>ML Defense • Discord Threat Alerts</span>
@@ -237,7 +237,7 @@
 
                                 <!-- Project 3: Nexiz_v2 Developer Portal -->
                                 <a href="https://github.com/nadilrself-art/My-Website1" target="_blank" rel="noopener noreferrer" class="schedule-event-item project-event-link" title="View Nexiz_v2 Portal on GitHub">
-                                    <span class="event-time-pill" style="color: var(--coral-primary); background: rgba(223, 66, 52, 0.12);">PROD</span>
+                                    <span class="event-time-pill" style="color: var(--coral-primary); background: rgba(223, 66, 52, 0.12);">21:00</span>
                                     <div class="event-details">
                                         <strong>Nexiz_v2 Developer Portal</strong>
                                         <span>Liquid Glass Architecture • Telemetry</span>
@@ -1015,9 +1015,6 @@
     <footer class="footer">
         <div class="container footer-content">
             <p>© 2026 <strong>Nexiz_v2 (Nadil Havindu)</strong> — Owner @ CeylonEsports Minecraft Network</p>
-            <a href="#home" class="back-to-top" aria-label="Back to top">
-                <i class="fa-solid fa-arrow-up"></i>
-            </a>
         </div>
     </footer>
 
